@@ -4,7 +4,7 @@
 
 Replace absolute paths to relative paths after typescript compilation (tsc) during compile-time.
 
-[![npm version](https://badge.fury.io/js/@herbcaudill/tscpaths.svg)](https://badge.fury.io/js/@herbcaudill/tscpaths)
+[![npm version](https://badge.fury.io/js/%40herbcaudill%2Ftscpaths.svg)](https://badge.fury.io/js/@herbcaudill/tscpaths)
 [![Dependency Status](https://david-dm.org/herbcaudill/tscpaths.svg)](https://david-dm.org/herbcaudill/tscpaths)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
