@@ -1,6 +1,6 @@
 {
   "name": "@herbcaudill/tscpaths",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Replace absolute paths to relative paths after typescript compilation",
   "main": "cjs/index.js",
   "module": "lib/index.js",
