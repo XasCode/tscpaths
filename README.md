@@ -1,11 +1,11 @@
-> This is a fork of joonhocho/tscpaths that adds the --silent option.
+> This is a fork of [joonhocho/tscpaths](https://github.com/joonhocho/tscpaths) that adds the --silent option.
 
 # tscpaths
 
 Replace absolute paths to relative paths after typescript compilation (tsc) during compile-time.
 
-[![npm version](https://badge.fury.io/js/tscpaths.svg)](https://badge.fury.io/js/tscpaths)
-[![Dependency Status](https://david-dm.org/joonhocho/tscpaths.svg)](https://david-dm.org/joonhocho/tscpaths)
+[![npm version](https://badge.fury.io/js/@herbcaudill/tscpaths.svg)](https://badge.fury.io/js/@herbcaudill/tscpaths)
+[![Dependency Status](https://david-dm.org/herbcaudill/tscpaths.svg)](https://david-dm.org/herbcaudill/tscpaths)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
 ## Comparison to [tsconfig-paths](https://github.com/dividab/tsconfig-paths)
