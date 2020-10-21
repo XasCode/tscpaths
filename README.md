@@ -1,4 +1,4 @@
-> **Note:**
+> This is a fork of joonhocho/tscpaths that adds the --silent option.
 
 # tscpaths
 
@@ -17,16 +17,17 @@ Replace absolute paths to relative paths after typescript compilation (tsc) duri
 First, install tscpaths as devDependency using npm or yarn.
 
 ```sh
-npm install --save-dev tscpaths
+npm install --save-dev @herbcaudill/tscpaths
 # or
-yarn add -D tscpaths
+yarn add -D @herbcaudill/tscpaths
 ```
 
-## Add it to your build scripts in package.json
+## Add it to your postbuild script in package.json
 
 ```json
 "scripts": {
-  "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./out",
+  "build": "tsc --project tsconfig.json",
+  "postbuild": "tscpaths -p tsconfig.json -s ./src -o ./out --silent",
 }
 ```
 
@@ -40,19 +41,3 @@ yarn add -D tscpaths
 | --silent     | silence the console output                         |
 
 You need to provide -s (--src) and -o (--out), because it's hard to predict source and output paths based on tsconfig.json.
-
-I've tried a little and failed. :(
-
-`tsc` does some magic to determine source and output paths and I haven't dived too deep to mimic it.
-
-For now, it's simpler to provide the paths manually.
-
-If you know how, Pull Requests are welcome!
-
-# Disclaimer !!!!!
-
-This is not a mature project yet.
-
-It works for my setup so far.
-
-It may not work correctly if your setup is too complicated, so please do some testing before pushing it to production!!!
