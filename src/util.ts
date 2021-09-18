@@ -1,5 +1,5 @@
+import { readFileSync } from 'fs';
 import { dirname, resolve } from 'path';
-
 /*
 "baseUrl": ".",
 "outDir": "lib",
@@ -42,7 +42,8 @@ export const loadConfig = (file: string): ITSConfig => {
       outDir: undefined,
       paths: undefined,
     },
-  } = require(file) as IRawTSConfig;
+  } = JSON.parse(readFileSync(file) as unknown as string) as IRawTSConfig;
+  // } = require(file) as IRawTSConfig;
 
   const config: ITSConfig = {};
   if (baseUrl) {

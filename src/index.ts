@@ -6,7 +6,7 @@ const program = new Command();
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { globbySync as sync } from 'globby';
 import { dirname, relative, resolve } from 'path';
-import { loadConfig } from './util';
+import { loadConfig } from './util.js';
 
 program
   .version('0.0.1')
@@ -24,13 +24,7 @@ program.on('--help', () => {
 
 program.parse(process.argv);
 
-const { project, src, out, verbose, silent } = program as {
-  project?: string;
-  src?: string;
-  out?: string;
-  verbose?: boolean;
-  silent?: boolean;
-};
+const { project, src, out, verbose, silent } = program.opts();
 
 if (!project) {
   throw new Error('--project must be specified');
@@ -166,7 +160,7 @@ const replaceAlias = (text: string, outFile: string): string =>
     );
 
 // import relative to absolute path
-const files = sync(`${outPath}/**/*.{js,jsx,ts,tsx}`, {
+const files = sync(`${outPath.replace(/\\/g, '/')}/**/*.{js,jsx,ts,tsx}`, {
   dot: true,
   noDir: true,
 } as any).map((x: any) => resolve(x));

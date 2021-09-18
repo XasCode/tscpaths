@@ -1,7 +1,0 @@
-module.exports = {
-  arrowParens: 'always',
-  bracketSpacing: true,
-  bracketSameLine: false,
-  singleQuote: true,
-  trailingComma: 'es5',
-};
