@@ -1,6 +1,6 @@
 {
   "name": "@xascode/tscpaths",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Replace absolute paths to relative paths after typescript compilation",
   "exports": [
     "./lib/index.js",
