@@ -1,9 +1,10 @@
 #! /usr/bin/env node
 
 // tslint:disable no-console
-import * as program from 'commander';
+import { Command } from 'commander';
+const program = new Command();
 import { existsSync, readFileSync, writeFileSync } from 'fs';
-import { sync } from 'globby';
+import { globbySync as sync } from 'globby';
 import { dirname, relative, resolve } from 'path';
 import { loadConfig } from './util';
 
@@ -168,7 +169,7 @@ const replaceAlias = (text: string, outFile: string): string =>
 const files = sync(`${outPath}/**/*.{js,jsx,ts,tsx}`, {
   dot: true,
   noDir: true,
-} as any).map((x) => resolve(x));
+} as any).map((x: any) => resolve(x));
 
 let changedFileCount = 0;
 
